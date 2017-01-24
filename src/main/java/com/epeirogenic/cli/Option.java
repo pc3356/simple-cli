@@ -68,6 +68,20 @@ public class Option {
             return this;
         }
 
+        public Builder hasArgs() {
+            if(args == 0) {
+                args = 1;
+            }
+            return this;
+        }
+
+        public Builder longOpt(final String opt) {
+            if(arg == null) {
+                arg = opt;
+            }
+            return this;
+        }
+
         public Option build() {
 
             if(arg == null) {
